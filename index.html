@@ -5,11 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collaborative News Feed</title>
-    <style>
+      <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         .hidden {
             display: none;
         }
 
+        input,
+        textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .message {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .message small {
+            color: #666;
+        }
+
+        #auth-error,
+        #post-error {
+            color: red;
+        }
     </style>
 </head>
 

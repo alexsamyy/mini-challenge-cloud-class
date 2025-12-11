@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collaborative News Feed</title>
-      <style>
+    <style>
         body {
             font-family: sans-serif;
             max-width: 800px;
@@ -84,6 +84,12 @@
         </div>
     </section>
 
+    <section id="post-section" class="hidden">
+        <h2>Poster un message</h2>
+        <textarea id="message-content" rows="3" placeholder="Ecris ton message"></textarea>
+        <button onclick="postMessage()">Poster</button>
+        <p id="post-error"></p>
+    </section>
 
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>

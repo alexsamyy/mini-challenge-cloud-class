@@ -56,3 +56,25 @@ function signInWithEmailAndPassword() {
 function signOut() {
     auth.signOut();
 }
+
+function postMessage() {
+    const content = document.getElementById('message-content').value;
+    const user = auth.currentUser;
+
+    if (user && content.trim() !== "") {
+        console.log("msg : ", content);
+        console.log("user : ", user.email);
+        db.collection('messages').add({
+            content: content,
+            uid: user.uid,
+            email: user.email,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+            .then(() => {
+                document.getElementById('message-content').value = '';
+            })
+            .catch(error => {
+                document.getElementById('post-error').textContent = error.message;
+            });
+    }
+}

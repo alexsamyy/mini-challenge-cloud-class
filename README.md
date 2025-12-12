@@ -2,5 +2,5 @@
 
 ## Auteurs
 - Justin MARTINS
-- Nikita Valenza
+- Nikita VALENZA
 - Alex SAM-YIN-YANG

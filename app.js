@@ -91,9 +91,10 @@ db.collection("messages")
         if (data.timestamp) {
           timeString = data.timestamp.toDate().toLocaleString();
         }
-
+        
+        formattedEmail = data.email.substring(0, data.email.indexOf("@"));
         messageDiv.innerHTML = `
-            <strong>${data.email}</strong> <small>${timeString}</small><br>
+            <strong>${formattedEmail}</strong> <small>${timeString}</small><br>
             ${data.content}
         `;
         messagesList.appendChild(messageDiv);

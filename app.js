@@ -17,6 +17,7 @@ const userInfo = document.getElementById("user-info");
 const userEmailSpan = document.getElementById("user-email");
 const postSection = document.getElementById("post-section");
 const authError = document.getElementById("auth-error");
+const messagesList = document.getElementById("messages-list");
 
 auth.onAuthStateChanged((user) => {
   if (user) {
@@ -60,8 +61,6 @@ function postMessage() {
   const user = auth.currentUser;
 
   if (user && content.trim() !== "") {
-    console.log("msg : ", content);
-    console.log("user : ", user.email);
     db.collection("messages")
       .add({
         content: content,
